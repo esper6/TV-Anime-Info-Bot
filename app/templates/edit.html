@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Edit Anime</h1>
+
+<form action="{{ url_for('edit_anime', name=anime.name) }}" method="POST">
+    Name: <input type="text" name="name" value="{{ anime.name }}" required><br>
+    <input type="submit" value="Update">
+</form>
+
+{% endblock %}

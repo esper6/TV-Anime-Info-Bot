@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Create New Anime</h1>
+
+<form action="{{ url_for('create_anime') }}" method="POST">
+    Name: <input type="text" name="name" required><br>
+    <input type="submit" value="Search">
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% endblock %}

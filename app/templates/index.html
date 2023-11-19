@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Welcome to the TV Anime Info Bot</h1>
+
+<!-- You can iterate over the animes and create a link to their detail page -->
+
+<form method="POST" action="{{ url_for('search_anime_by_name') }}">
+     <input type="text" id="anime_name" name="anime_name" required>
+     <button type="submit">Search</button>
+</form>
+
+<p>Currently tracked Anime:</p>
+
+{% for anime in animes %}
+    <p><a href="{{ url_for('anime', name=anime.name) }}">{{ anime.name }}</a></p>
+{% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{ result.title.english }}</h1>
+
+    {% if result.coverImage %}
+        <img src="{{ result.coverImage.large }}" alt="{{ result.title.english }} Cover Image">
+    {% else %}
+        <p>No cover image available</p>
+    {% endif %}
+
+    <p>Start Date:
+        {% if result.startDate %}
+            {{ result.startDate.month }}/{{ result.startDate.day }}/{{ result.startDate.year }}
+        {% else %}
+            Not available
+        {% endif %}
+    </p>
+
+    <p>End Date:
+        {% if result.endDate %}
+            {{ result.endDate.month }}/{{ result.endDate.day }}/{{ result.endDate.year }}
+        {% else %}
+            Not available
+        {% endif %}
+    </p>
+
+    {% if result.description %}
+        <p>{{ result.description }}</p>
+    {% else %}
+        <p>No description available</p>
+    {% endif %}
+{% endblock %}

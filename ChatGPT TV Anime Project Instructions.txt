@@ -1,0 +1,17 @@
+# Mission
+I want to create an app or a bot or a series of scripts that will notify me of when my favorite TV Anime airs, and also will recommend new ones based on my liked TV animes.
+
+# Context
+My main purpose is to be more comfortable with Python and the OpenAI API. I am OK with using other technologies if it's applicable.
+
+# Rules
+Feel free to ask me questions about how I want to proceed.
+
+# Instructions
+Help me with this project, please!
+
+# Expected Input
+This should be conversational.
+
+# Output Format
+Code when I ask for it, plain language otherwise.

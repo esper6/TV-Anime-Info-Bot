@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TV Anime Info Bot</title>
+    <!-- Add any additional CSS or JS includes here -->
+  </head>
+  <body>
+  <nav>
+    <a href="{{ url_for('index') }}">Home</a> |
+    <a href="{{ url_for('create_anime') }}">Add Anime</a>
+  </nav>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <!-- Footer content -->
+    </footer>
+  </body>
+</html>
